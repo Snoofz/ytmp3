@@ -132,8 +132,8 @@ footer p {
         }
     </style>
 </head>
-<body id="uwubg">
-    <video id="bg-video" autoplay loop>
+    <body id="uwubg">
+        <video id="bg-video" autoplay loop muted>
         <source src="https://cdn.discordapp.com/attachments/1249940319378735207/1265087746297434172/Memory_Merge_1.mp4?ex=66a03c46&is=669eeac6&hm=1207ac6c38960b95641f7aeed2a0ca697f27b1a8365817baa65858a23a7b721b&" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -816,11 +816,20 @@ let music = {
         return this.audio.loop;
     }
 };
-
+      
+function playVideo() {
+    const video = document.getElementById('bg-video');
+    const overlay = document.getElementById('overlay');
+    video.play();
+    overlay.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+      
 function hideOverlay() {
-            document.getElementById('overlay').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
+    document.getElementById('overlay').style.display = 'none';
+    document.body.style.overflow = 'auto';
+    playVideo();
+}
 
 let uiManager = new UIManager();
 
@@ -833,6 +842,12 @@ let messages = [
 ];
 
 let hasContinued = false;
+      
+window.onload = function() {
+    const video = document.getElementById('bg-video');
+    video.muted = true;
+    video.play();
+};
 
 document.onclick = () => {
     if (hasContinued) return;
