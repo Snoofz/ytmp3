@@ -821,7 +821,7 @@ let hasContinued = false;
 
 document.onclick = () => {
     if (hasContinued) return;
-    music.volume = 0.05;
+    music.volume = 0;
     music.loop = true;
     music.play();
 
@@ -902,11 +902,11 @@ document.onclick = () => {
 
     tabs[4].uiTab.addSpacer(10);
 
-    let slider = tabs[4].uiTab.addSlider(0, 1, 0.001, 0.05, "Volume", (value) => {
+    let slider = tabs[4].uiTab.addSlider(0, 1, 0.001, 0, "Volume", (value) => {
         music.volume = value;
     });
 
-    slider.value = 0.05;
+    slider.value = 0;
 
     setInterval(() => {
         uiManager.createNotification('Snoofz', messages[Math.floor(Math.random() * messages.length)], 7000);
