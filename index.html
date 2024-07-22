@@ -861,14 +861,14 @@ document.onclick = () => {
         newTab("https://github.com/Snoofz/ytmp3");
     });
 
-    tabs[3].uiTab.addLabel("Discord: snoofzthefox", "flicker-animation");
-    tabs[3].uiTab.addLabel("Email: uwufoonix5@outlook.com", "flicker-animation");
-    tabs[3].uiTab.addLabel("Telegram: @foofoothefox", "flicker-animation");
+    tabs[2].uiTab.addLabel("Discord: snoofzthefox", "flicker-animation");
+    tabs[2].uiTab.addLabel("Email: uwufoonix5@outlook.com", "flicker-animation");
+    tabs[2].uiTab.addLabel("Telegram: @foofoothefox", "flicker-animation");
 
-    tabs[4].uiTab.addSpacer(15);
-    tabs[4].uiTab.addLabel("BG Music Controls", "flicker-animation");
+    tabs[3].uiTab.addSpacer(15);
+    tabs[3].uiTab.addLabel("BG Music Controls", "flicker-animation");
     music.loop = true;
-    tabs[4].uiTab.addButton("Pause", () => {
+    tabs[3].uiTab.addButton("Pause", () => {
         if (music.isPlaying) {
             music.pause();
         } else {
@@ -876,7 +876,7 @@ document.onclick = () => {
         }
     });
 
-    tabs[4].uiTab.addButton("Resume", () => {
+    tabs[3].uiTab.addButton("Resume", () => {
         if (music.isPlaying) {
             uiManager.createNotification('Snoofz', 'The BG Music is already playing!', 4500);
         } else {
@@ -884,7 +884,7 @@ document.onclick = () => {
         }
     });
 
-    tabs[4].uiTab.addButton("Stop", () => {
+    tabs[3].uiTab.addButton("Stop", () => {
         if (music.isPlaying) {
             music.stop();
         } else {
@@ -892,7 +892,7 @@ document.onclick = () => {
         }
     });
 
-    tabs[4].uiTab.addButton("Play", () => {
+    tabs[3].uiTab.addButton("Play", () => {
         if (music.isPlaying) {
             uiManager.createNotification('Snoofz', 'The BG Music is already playing!', 4500);
         } else {
@@ -900,9 +900,9 @@ document.onclick = () => {
         }
     });
 
-    tabs[4].uiTab.addSpacer(10);
+    tabs[3].uiTab.addSpacer(10);
 
-    let slider = tabs[4].uiTab.addSlider(0, 1, 0.001, 0, "Volume", (value) => {
+    let slider = tabs[3].uiTab.addSlider(0, 1, 0.001, 0, "Volume", (value) => {
         music.volume = value;
     });
 
