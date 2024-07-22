@@ -821,6 +821,7 @@ function playVideo() {
     const video = document.getElementById('bg-video');
     const overlay = document.getElementById('overlay');
     video.play();
+    video.muted = false;
     overlay.style.display = 'none';
     document.body.style.overflow = 'auto';
 }
