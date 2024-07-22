@@ -250,7 +250,6 @@ class UIManager {
         container.style.zIndex = '9999';
         container.style.width = width;
         container.style.height = height;
-        container.style.zIndex = "99999";
 
         container.style.top = `calc(50% - (${height} / 2))`;
         container.style.left = `calc(50% - (${width} / 2))`;
@@ -828,8 +827,9 @@ let music = {
 };
 
 function hideOverlay() {
-    document.getElementById('overlay').style.display = 'none';
-}
+            document.getElementById('overlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
 
 let uiManager = new UIManager();
 
