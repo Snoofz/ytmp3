@@ -784,36 +784,36 @@ function newTab(url) {
 }
 
 let music = {
-    audio: new Audio("https://github.com/Snoofz/snoofz.github.io/raw/main/ThxSoMch%20-%20Hate..mp3"),
+    video: document.getElementById('bg-video'),
     isPlaying: false,
     play: function() {
-        this.audio.play();
+        this.video.play();
         this.isPlaying = true;
     },
     pause: function() {
-        this.audio.pause();
+        this.video.pause();
         this.isPlaying = false;
     },
     resume: function() {
-        this.audio.play();
+        this.video.play();
         this.isPlaying = true;
     },
     stop: function() {
-        this.audio.pause();
-        this.audio.currentTime = 0;
+        this.video.pause();
+        this.video.currentTime = 0;
         this.isPlaying = false;
     },
     set volume(value) {
-        this.audio.volume = value;
+        this.video.volume = value;
     },
     get volume() {
-        return this.audio.volume;
+        return this.video.volume;
     },
     set loop(value) {
-        this.audio.loop = value;
+        this.video.loop = value;
     },
     get loop() {
-        return this.audio.loop;
+        return this.video.loop;
     }
 };
       
@@ -848,6 +848,7 @@ window.onload = function() {
     const video = document.getElementById('bg-video');
     video.muted = true;
     video.play();
+    video.pause();
 };
 
 document.onclick = () => {
