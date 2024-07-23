@@ -170,6 +170,7 @@ class UIManager {
         notificationContainer.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.5)'; // Darker shadow
         notificationContainer.style.zIndex = '9999';
         notificationContainer.style.transition = 'transform 0.3s ease-in-out';
+        notificationContainer.style.opacity = 0.5;
 
         const title = document.createElement('h2');
         title.textContent = titleText;
@@ -241,6 +242,7 @@ class UIManager {
         container.style.zIndex = '9999';
         container.style.width = width;
         container.style.height = height;
+        container.style.opacity = 0.5;
 
         container.style.top = `calc(50% - (${height} / 2))`;
         container.style.left = `calc(50% - (${width} / 2))`;
@@ -329,6 +331,7 @@ class UIManager {
         button.style.fontSize = '16px';
         button.addEventListener('click', buttonAction);
         button.classList.add('flicker-animation'); // Add rainbow animation class
+        button.style.opacity = 0.7;
 
         const buttonTextSpan = document.createElement('span');
         buttonTextSpan.textContent = buttonText;
@@ -379,6 +382,7 @@ class UIManager {
         input.style.backgroundColor = '#0e0e0e'; // White text color
         input.classList.add('flicker-animation'); // Add rainbow animation class
         input.focus();
+        input.style.opacity = 0.7;
 
         this.UIContext.appendChild(input);
         input.focus();
@@ -440,6 +444,7 @@ class UIManager {
             tabButton.style.fontWeight = 'bold';
             tabButton.style.fontSize = '16px';
             tabButton.classList.add('flicker-animation'); // Add rainbow animation class
+            tabButton.style.opacity = 0.7;
 
             tabButton.addEventListener('click', () => {
                 contentContainers.forEach((container, idx) => {
@@ -487,6 +492,7 @@ class UIManager {
             tabButton.style.fontWeight = 'bold';
             tabButton.style.fontSize = '16px';
             tabButton.classList.add('flicker-animation'); // Add rainbow animation class
+            tabButton.style.opacity = 0.7;
 
             tabButton.addEventListener('click', () => {
                 contentContainers.forEach((container, idx) => {
@@ -556,6 +562,7 @@ class UITab {
         button.style.fontSize = '16px';
         button.addEventListener('click', buttonAction);
         button.classList.add('flicker-animation'); // Add rainbow animation class
+        button.style.opacity = 0.7;
 
         const buttonTextSpan = document.createElement('span');
         buttonTextSpan.textContent = buttonText;
@@ -595,6 +602,8 @@ class UITab {
         input.style.backgroundColor = '#0e0e0e'; // White text color
         input.classList.add('flicker-animation'); // Add rainbow animation class
         input.focus();
+        input.style.opacity = 0.7;
+
         this.contentContainer.appendChild(input);
         input.focus();
         return input;
@@ -668,6 +677,7 @@ class UITab {
         bubble.style.transition = 'opacity 0.5s'; // Add transition for fade effect
         bubble.style.opacity = 0; // Initially hidden
         bubble.textContent = `${customText}: ${currentValue}`;
+        bubble.style.opacity = 0.7;
         textBubble = bubble;
     
         sliderContainer.appendChild(bubble);
