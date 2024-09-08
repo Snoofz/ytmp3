@@ -1048,7 +1048,8 @@ document.onclick = () => {
             button.classList.add("disabled-button");
 
             try {
-                downloadFile('https://cors-bypass-x-475b29fb1ab4.herokuapp.com/https://ytmp3-api-c278ab381dfc.herokuapp.com/api/ytmp3?url=' + youtubeUrl, rahhh, button, g, dots);
+                const url = 'https://corsproxy.io/?' + encodeURIComponent('https://ytmp3-api-c278ab381dfc.herokuapp.com/api/ytmp3?url=');
+                downloadFile(url + youtubeUrl, rahhh, button, g, dots);
             } catch (error) {
                 console.error('Error:', error);
                 uiManager.createNotification('Error', 'Failed to convert video to MP3', 5500);
